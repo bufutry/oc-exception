@@ -10,4 +10,6 @@
 
 @interface Log : NSObject
 
++(BOOL)StartLog;
+void uncaughtExceptionHandler(NSException *exception);
 @end

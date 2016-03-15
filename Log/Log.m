@@ -7,7 +7,33 @@
 //
 
 #import "Log.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @implementation Log
++(BOOL)StartLog
+{
+    while (1) {
+        
+    }
+    return YES;
+}
 
+- (void)_deviceInfo
+{
+    UIDevice *device  = [UIDevice currentDevice];
+    NSString *systmVision = device.systemVersion;
+    NSString *deviceName = device.name;
+    NSString *fileName = [NSString stringWithFormat:@"%s",__FILE__];
+    NSString *funcName = [NSString stringWithFormat:@"%s",__FUNCTION__];
+    NSString *funcLine = [NSString stringWithFormat:@"%d",__LINE__];
+    
+    NSSetUncaughtExceptionHandler(nil);
+}
+
+void uncaughtExceptionHandler(NSException *exception)
+{
+
+    
+}
 @end
